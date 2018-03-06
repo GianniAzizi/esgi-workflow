@@ -8,3 +8,9 @@ addons:
             secure: bbee60fe00af25fef75b93976f645c2de352220b
 script:
     - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
+notifications:
+  email:
+      recipients:
+        - gianni.azizi@gmail.com
+      on_success: never
+      on_failure: always

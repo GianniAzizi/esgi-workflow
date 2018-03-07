@@ -1,5 +1,7 @@
 spring:
     data:
         mongodb:
-            uri: ${MONGODB_URI}
+            uri: ${SPRING_DATASOURCE_URL}
             database: pokemons
+            username: ${SPRING_DATASOURCE_USERNAME}
+            password: ${SPRING_DATASOURCE_PASSWORD}

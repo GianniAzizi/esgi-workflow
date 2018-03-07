@@ -2,3 +2,4 @@ spring:
     data:
         mongodb:
             uri: ${MONGODB_URI}
+            database: pokemons

@@ -11,7 +11,7 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 @ChangeLog(order = "001")
 public class SetupDatabase {
 
-    @ChangeSet(order = "01", id="insertPokemon-01", author="initiator")
+    @ChangeSet(order = "01", id="insertPokemon-01", author="heroku_88hrvn4g")
     public void addPokemons(MongoTemplate mongoTemplate) {
         Pokemon pokemon = new Pokemon();
         pokemon.setIndex(1);

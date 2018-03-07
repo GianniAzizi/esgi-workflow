@@ -23,34 +23,7 @@ import java.util.Collections;
 @Configuration
 @Import(value = MongoAutoConfiguration.class)
 @EnableMongoRepositories({"fr.esgi.domain.repositories"})
-public class MongoConfiguration extends AbstractMongoConfiguration{
-
-    @Autowired
-    private MongoClient mongoClient;
-
-    @Autowired
-    private MongoProperties mongoProperties;
-
-    @Bean
-    public ValidatingMongoEventListener validatingMongoEventListener() {
-        return new ValidatingMongoEventListener(validator());
-    }
-
-    @Bean
-    public LocalValidatorFactoryBean validator() {
-        return new LocalValidatorFactoryBean();
-    }
-
-    @Override
-    protected String getDatabaseName() {
-        return mongoProperties.getDatabase();
-    }
-
-    @Override
-    public MongoClient mongoClient() {
-        return mongoClient;
-    }
-
+public class MongoConfiguration {
     @Bean
     public Mongobee mongobee(MongoClient mongoClient, MongoTemplate mongoTemplate, MongoProperties mongoProperties) {
         Mongobee mongobee = new Mongobee(mongoClient);

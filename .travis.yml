@@ -16,3 +16,5 @@ notifications:
       on_failure: always
 services:
   - mongodb
+env:
+  - PROFILE=test

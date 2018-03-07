@@ -1,6 +1,6 @@
 spring:
     profiles:
-        active: dev
+        active: local
     data:
         mongodb:
             uri: mongodb://localhost:27017
